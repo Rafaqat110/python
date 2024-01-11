@@ -30,6 +30,7 @@ def register_user():
 	Label(screen1,text= "Account Created Successfully...!",font ="green",height= '2',width='30').pack()
 
 
+
 def register():
 	global screen1
 	screen1 = Toplevel(screen)
@@ -64,6 +65,7 @@ def login_verify():
 		if password1 in verify:
 			print ("Success")
 			submit()
+			
 		else:
 			messagebox.showerror("error","wrong password")
 			print ("Wrong Password ")
@@ -95,6 +97,7 @@ def login():
 	password_entry1.pack()
 	Label(screen2,text="",height= '2',width='30').pack()
 	Button(screen2, text="login", height= "2",width="30",bg="spring green", command =login_verify).pack()
+	
 
 
 def main_screen():
@@ -102,7 +105,7 @@ def main_screen():
 	screen = Tk()
 	screen.geometry("700x400")
 	Label(text="",height= '2',width='30').pack()
-	Label(text="Login GUI Interface",font=SOLID).pack()
+	Label(text="Teachers Log In",font=SOLID).pack()
 	Label(text="",height= '5',width='30').pack()
 	Button(text="Login ",height= '2',width='30',bg="spring green",command = login).pack()
 	Label(text="",height= '2',width='30').pack()
